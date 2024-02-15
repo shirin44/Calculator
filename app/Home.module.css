@@ -1,0 +1,28 @@
+/* styles/Home.module.css */
+
+.container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* First part (30%) */
+  .firstPart {
+    flex: 0 0 30%;
+    background-color: grey;
+    height: 100vh; /* Adjust the height as needed */
+  }
+  
+  /* Second part (70%) */
+  .secondPart {
+    flex: 1;
+    background-color: white;
+    height: 100vh; /* Adjust the height as needed */
+  }
+ 
+  
+
+  .test {
+
+    color: red;
+  }
