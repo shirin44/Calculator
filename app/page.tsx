@@ -53,18 +53,21 @@ const Calculator: React.FC = () => {
     try {
       // Evaluate and set the result
       const result = eval(displayValue);
-      console.log(typeof result)
-
-      if(!isFinite(result)) {
+  
+      if (!isFinite(result)) {
         setDisplayValue("Error");
-        return
+        return;
       }
-      setDisplayValue(result.toString());
+  
+      // Format the result to have a maximum of 8 digits after the decimal point
+      const formattedResult = parseFloat(result.toFixed(8)).toString();
+      setDisplayValue(formattedResult);
     } catch (error) {
       // Handle invalid expressions
       setDisplayValue("Error");
     }
   };
+  
 
   return (
     <div className="flex justify-center items-center h-screen bg-white">
